@@ -11,7 +11,6 @@ body {
 
     display: flex;
     flex-direction: column;
-
     font-family: var(--font-family-base);
     letter-spacing: -0.03em;
     color: var(--color-gray-50);
@@ -74,7 +73,6 @@ h5, .h5, {
 
 h6, .h6, {
     @include fluid-text(20, 16);
-
 }
 
 a,
