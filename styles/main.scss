@@ -13,6 +13,14 @@
 @use 'blocks/soc1als';
 @use 'blocks/footer';
 
-.header {
+@use 'blocks/metrics';
+@use 'blocks/team';
+@use 'blocks/resources-preview';
+@use 'blocks/advantage-card';
+@use 'blocks/hero';
+
+
+.header,
+.footer {
     display: none !important;
 }
