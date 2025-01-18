@@ -35,29 +35,58 @@
 
   &--top {
     &::before {
-        content: '';
-        bottom: 100%;
+      content: "";
+      bottom: 100%;
     }
   }
 
   &--bottom {
     &::after {
-        content: '';
-        top: 100%;
+      content: "";
+      top: 100%;
     }
   }
-  
+
   &--left {
     &::before,
     &::after {
-        right: 100%;
+      right: 100%;
     }
-}
+  }
 
   &--right {
-      &::before,
+    &::before,
     &::after {
-        left: 100%;
+      left: 100%;
     }
+  }
+}
+
+.circle-icon {
+  --circleSize: #{rem(52)};
+  --circleMarginLeft: #{rem(20)};
+
+  position: relative;
+  min-height: var(--circleSize);
+  padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+
+  @include laptop {
+    --circleSize: #{rem(44)};
+    --circleMarginLeft: #{rem(14)};
+  }
+
+  @include mobile {
+    --circleSize: #{rem(40)};
+  }
+
+  &::after {
+    @include square(var(--circleSize));
+    @include abs-y;
+
+    content: "";
+    right: 0;
+    background: url("../../icons/arrow-top-right_black.svg") center no-repeat
+      var(--color-accent);
+    border-radius: 50%;
   }
 }
