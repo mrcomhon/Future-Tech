@@ -1,7 +1,6 @@
 @use "../helpers" as *;
 
 .blog-details {
-    overflow-x: hidden;
     
     &__banner {
         display: flex;
